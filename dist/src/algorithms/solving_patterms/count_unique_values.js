@@ -12,11 +12,10 @@ function countUniqueValues(list) {
     return 0;
   }
   const acc = {};
-  for (let i = 0; i <= list.length; i++) {
+  for (let i = 0; i < list.length; i++) {
     const num = list[i];
     acc[num] ? acc[num] += 1 : acc[num] = 1;
   }
-  console.log(acc);
   return Object.keys(acc).length;
 }
 exports.default = countUniqueValues;

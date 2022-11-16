@@ -17,12 +17,10 @@ function countUniqueValues(list: number[]) {
   
   const acc: Record<number, number> = {};
   
-  for (let i = 0; i <= list.length; i++) {
+  for (let i = 0; i < list.length; i++) {
     const num = list[i];
     acc[num] ? acc[num] += 1 : acc[num] = 1;
   }
-  
-  console.log(acc);
   
   return Object.keys(acc).length;
 }
